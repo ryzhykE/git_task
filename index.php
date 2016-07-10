@@ -13,3 +13,5 @@ class Single {
 	private function __construct() {}
     protected function __clone() {}
 }
+
+$obj = new Single();
