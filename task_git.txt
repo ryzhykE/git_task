@@ -1,0 +1,20 @@
+1.1
+$ git log develop..develop-feature1 --pretty=format:"%ad [%an] %s" --after=3.hours --date-order --all-match
+
+1.2
+$ git log --grep="^213" --pretty=format:"%ad [%an] %s" --date-order
+
+2
+$ git cherry-pick e43a6fd3e94888d76779ad79fb568ed180e5fcdf
+
+3
+Необходимо перемещение коммитов на начальное место 
+$ git rebase -i HEAD~3
+где -i Интерактивное перемещение
+HEAD~3 - Аргумента родителя последнего коммита 
+запуск этой команды выдаст список коммитов 
+
+напротив каждого комментария пишем '-r' и меняем комментарий
+
+$ git push origin develop-feature3
+отправляем изменение на сервер
